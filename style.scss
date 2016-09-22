@@ -1,3 +1,9 @@
+// VARIABLES
+$clr_red: hsla(0, 100%, 44%, 1);
+$clr_orange: hsla(29, 100%, 44%, 1);
+$clr_yellow: hsla(50, 100%, 44%, 1);
+$clr_green: hsla(87, 100%, 44%, 1);
+$clr_greendk: hsla(133, 100%, 44%, 1);
 // STYLES
 @mixin ratingSize {
      @for $i from 1 through 100{
@@ -6,80 +12,85 @@
         }
     }
 }
+@keyframes lessThan20 {
+    10% {
+        background: $clr_red;
+    }
 
-@keyframes lessThan20{
-  10% {
-    background: #f00;
-  }
-  100% {
-    background: #f00;
-  }
+    100% {
+        background: $clr_red;
+    }
 }
+@keyframes lessThan40 {
+    10% {
+        background: $clr_red;
+    }
 
-@keyframes lessThan40{
-  10% {
-    background: #f00;
-  }
-  100% {
-    background: #f80;
-  }
+    100% {
+        background: $clr_orange;
+    }
 }
+@keyframes lessThan60 {
+    10% {
+        background: $clr_red;
+    }
 
-@keyframes lessThan60{
-  10% {
-    background: #f00;
-  }
-  50% {
-    background: #f80;
-  }
-  100% {
-    background: #ff0;
-  }
+    50% {
+        background: $clr_orange;
+    }
+
+    100% {
+        background: $clr_yellow;
+    }
 }
+@keyframes lessThan80 {
+    10% {
+        background: $clr_red;
+    }
 
+    33% {
+        background: $clr_orange;
+    }
 
-@keyframes lessThan80{
-  10% {
-    background: #f00;
-  }
-  33% {
-    background: #f80;
-  }
-  66% {
-    background: #ff0;
-  }
-  100% {
-    background: #0a0;
-  }
+    66% {
+        background: $clr_yellow;
+    }
+
+    100% {
+        background: $clr_green;
+    }
 }
+@keyframes lessThan100 {
+    10% {
+        background: $clr_red;
+    }
 
-@keyframes lessThan100{
-  10% {
-    background: #f00;
-  }
-  25% {
-    background: #f80;
-  }
-  50% {
-    background: #ff0;
-  }
-  75% {
-    background: #0a0;
-  }
-  100% {
-    background: #040;
-  }
+    25% {
+        background: $clr_orange;
+    }
+
+    50% {
+        background: $clr_yellow;
+    }
+
+    75% {
+        background: $clr_green;
+    }
+
+    100% {
+        background: $clr_greendk;
+    }
 }
 
 .block {
     width: 200px;
 }
 
-  span {
+span {
     font-weight: bold;
     font-size: 14px;
     padding-bottom: 10px;
-  }
+}
 
 .title {
     float: left;
@@ -107,7 +118,7 @@ p:before {
     top: -5px;
     left: 0;
     z-index: 2;
-    background-color: #f00;
+    background-color: $clr_red;
     transition: linear 2s;
 }
 
@@ -125,26 +136,26 @@ p:after {
 
 .red + p:before {
     animation: lessThan20 2s;
-    background: #f00;
+    background: $clr_red;
 }
 
 .orange + p:before {
     animation: lessThan40 2s;
-    background: #f80;
+    background: $clr_orange;
 }
 
 .yellow + p:before {
     animation: lessThan60 2s;
-    background: #ff0;
+    background: $clr_yellow;
 }
 
 .green + p:before {
     animation: lessThan80 2s;
-    background: #0a0;
+    background: $clr_green;
 }
 
 .greendk + p:before {
     animation: lessThan100 2s;
-    background: #040;
+    background: $clr_greendk;
 }
 @include ratingSize;

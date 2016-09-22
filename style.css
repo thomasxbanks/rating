@@ -1,63 +1,63 @@
 @keyframes lessThan20 {
 	10% {
-		background: #f00;
+		background: #e00000;
 	}
 	100% {
-		background: #f00;
+		background: #e00000;
 	}
 }
 
 @keyframes lessThan40 {
 	10% {
-		background: #f00;
+		background: #e00000;
 	}
 	100% {
-		background: #f80;
+		background: #e06c00;
 	}
 }
 
 @keyframes lessThan60 {
 	10% {
-		background: #f00;
+		background: #e00000;
 	}
 	50% {
-		background: #f80;
+		background: #e06c00;
 	}
 	100% {
-		background: #ff0;
+		background: #e0bb00;
 	}
 }
 
 @keyframes lessThan80 {
 	10% {
-		background: #f00;
+		background: #e00000;
 	}
 	33% {
-		background: #f80;
+		background: #e06c00;
 	}
 	66% {
-		background: #ff0;
+		background: #e0bb00;
 	}
 	100% {
-		background: #0a0;
+		background: #7be000;
 	}
 }
 
 @keyframes lessThan100 {
 	10% {
-		background: #f00;
+		background: #e00000;
 	}
 	25% {
-		background: #f80;
+		background: #e06c00;
 	}
 	50% {
-		background: #ff0;
+		background: #e0bb00;
 	}
 	75% {
-		background: #0a0;
+		background: #7be000;
 	}
 	100% {
-		background: #040;
+		background: #00e031;
 	}
 }
 
@@ -97,7 +97,7 @@ p:before {
 	top: -5px;
 	left: 0;
 	z-index: 2;
-	background-color: #f00;
+	background-color: #e00000;
 	transition: linear 2s;
 }
 
@@ -115,27 +115,27 @@ p:after {
 
 .red + p:before {
 	animation: lessThan20 2s;
-	background: #f00;
+	background: #e00000;
 }
 
 .orange + p:before {
 	animation: lessThan40 2s;
-	background: #f80;
+	background: #e06c00;
 }
 
 .yellow + p:before {
 	animation: lessThan60 2s;
-	background: #ff0;
+	background: #e0bb00;
 }
 
 .green + p:before {
 	animation: lessThan80 2s;
-	background: #0a0;
+	background: #7be000;
 }
 
 .greendk + p:before {
 	animation: lessThan100 2s;
-	background: #040;
+	background: #00e031;
 }
 
 [data-rating="1"] + p:before {

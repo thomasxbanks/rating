@@ -1,29 +1,35 @@
-$(document).ready(function(){
-  var rating = $('.rating')[0].innerText
-  setTimeout(function(){
-  if ((rating > 0) && (rating < 20)) {
-    $('.rating').addClass('red')
-  }
+function rating(){
+  $('.rating').each(function() {
 
-  if ((rating >= 20) && (rating < 40)) {
-    $('.rating').addClass('orange')
-  }
+      var rating = this.innerText
+      // log for debug
+      console.log(rating)
 
-  if ((rating >= 40) && (rating < 60)) {
-    $('.rating').addClass('yellow')
-  }
+      if ((rating > 0) && (rating < 20)) {
+          $(this).addClass('red')
+      }
 
-  if ((rating >= 60) && (rating < 80)) {
-    $('.rating').addClass('green')
-  }
+      if ((rating >= 20) && (rating < 40)) {
+          $(this).addClass('orange')
+      }
 
-  if ((rating >= 80) && (rating <= 100)) {
-    $('.rating').addClass('greendk')
-  }
+      if ((rating >= 40) && (rating < 60)) {
+          $(this).addClass('yellow')
+      }
+
+      if ((rating >= 60) && (rating < 80)) {
+          $(this).addClass('green')
+      }
+
+      if ((rating >= 80) && (rating <= 100)) {
+          $(this).addClass('greendk')
+      }
+
+      $(this).attr('data-rating', rating)
+  })
+}
 
 
-
-    $('.rating').attr('data-rating', rating)
-  }, 100)
-
+$(document).ready(function() {
+    rating()
 })
