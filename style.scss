@@ -1,9 +1,18 @@
 // VARIABLES
+
+// Colors
 $clr_red: hsla(0, 100%, 44%, 1);
 $clr_orange: hsla(29, 100%, 44%, 1);
 $clr_yellow: hsla(50, 100%, 44%, 1);
 $clr_green: hsla(87, 100%, 44%, 1);
 $clr_greendk: hsla(133, 100%, 44%, 1);
+
+// Speed
+$speed: 2s;
+
+// Transition
+$trans: cubic-bezier(.79,.04,.61,.75);
+
 // STYLES
 @mixin ratingSize {
      @for $i from 1 through 100{
@@ -119,7 +128,7 @@ p:before {
     left: 0;
     z-index: 2;
     background-color: $clr_red;
-    transition: linear 2s;
+    transition: $trans $speed;
 }
 
 p:after {
@@ -135,27 +144,27 @@ p:after {
 }
 
 .red + p:before {
-    animation: lessThan20 2s;
+    animation: lessThan20 $speed;
     background: $clr_red;
 }
 
 .orange + p:before {
-    animation: lessThan40 2s;
+    animation: lessThan40 $speed;
     background: $clr_orange;
 }
 
 .yellow + p:before {
-    animation: lessThan60 2s;
+    animation: lessThan60 $speed;
     background: $clr_yellow;
 }
 
 .green + p:before {
-    animation: lessThan80 2s;
+    animation: lessThan80 $speed;
     background: $clr_green;
 }
 
 .greendk + p:before {
-    animation: lessThan100 2s;
+    animation: lessThan100 $speed;
     background: $clr_greendk;
 }
 @include ratingSize;
