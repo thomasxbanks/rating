@@ -1,0 +1,23 @@
+{
+  "name": "rating",
+  "version": "0.1.0",
+  "description": "Proof of concept for a css animated ratings indicator",
+  "main": "main.js",
+  "scripts": {
+    "build": "node-sass --output-style=compact ./style.scss ./style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasxbanks/rating.git"
+  },
+  "author": "thomasxbanks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasxbanks/rating/issues"
+  },
+  "homepage": "https://github.com/thomasxbanks/rating#readme",
+  "devDependencies": {
+    "node-sass": "^4.3.0"
+  }
+}
